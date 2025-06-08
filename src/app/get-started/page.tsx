@@ -2,36 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { LuNotebookPen } from "react-icons/lu";
-import { IoBagHandleOutline } from "react-icons/io5";
-import { AiOutlineRise } from "react-icons/ai";
-import HeaderText from "@/components/text/HeaderText";
 
-const steps = [
-  {
-    id: 1,
-    title: "Register Store",
-    description: "Quick sign-up & verification.",
-    icon: <LuNotebookPen />,
-  },
-  {
-    id: 2,
-    title: "Create Deals",
-    description: "Add products & launch promotions.",
-    icon: <IoBagHandleOutline />,
-  },
-  {
-    id: 3,
-    title: "Grow Sales",
-    description: "Track performance & expand reach.",
-    icon: <AiOutlineRise />,
-  },
-];
+import HeaderText from "@/components/text/HeaderText";
+import { steps } from "./GetStartConstant";
 
 const GetStarted = () => {
   return (
     <section
-      className="relative mb-16 sm:mb-24 lg:mb-32 px-4 sm:px-6 lg:px-8"
+      className="relative mb-16 py-16 px-4 sm:px-6 lg:px-8"
       id="features"
     >
       <div className="max-w-5xl mx-auto text-center">
@@ -41,7 +19,7 @@ const GetStarted = () => {
           className="text-white"
         />
 
-        <div className="flex flex-col items-center justify-center space-y-6 sm:space-y-8">
+        <div className="flex flex-col items-center justify-center space-y-6 sm:space-y-8 cursor-pointer">
           {steps.map(({ id, title, description, icon }, index) => (
             <motion.div
               key={id}

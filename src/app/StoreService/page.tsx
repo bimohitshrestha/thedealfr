@@ -2,61 +2,11 @@
 import ButtonText from "@/components/button/ButtonText";
 import HeaderText from "@/components/text/HeaderText";
 import React from "react";
-import { AiOutlineRise } from "react-icons/ai";
-import { FaRegChartBar } from "react-icons/fa";
-import { FcAdvertising } from "react-icons/fc";
-import { FiTarget } from "react-icons/fi";
-import { IoRocketOutline } from "react-icons/io5";
-import { MdOutlinePeople } from "react-icons/md";
-
-const storeData = [
-  {
-    icon: <MdOutlinePeople />,
-    title: "New Customers",
-    desc: "Connect with locals actively seeking deals.",
-    bgColor: "bg-blue-50",
-    iconColor: "text-blue-600",
-  },
-  {
-    icon: <AiOutlineRise />,
-    title: "Boost Sales",
-    desc: "Drive revenue with targeted promotions.",
-    bgColor: "bg-green-50",
-    iconColor: "text-green-600",
-  },
-  {
-    icon: <FaRegChartBar />,
-    title: "Track Performance",
-    desc: "Real-time analytics on customer engagement.",
-    bgColor: "bg-orange-50",
-    iconColor: "text-orange-600",
-  },
-  {
-    icon: <FcAdvertising />,
-    title: "Launch Product",
-    desc: "Announce new arrivals effectively.",
-    bgColor: "bg-pink-50",
-    iconColor: "text-pink-600",
-  },
-  {
-    icon: <FiTarget />,
-    title: "Precise Marketing",
-    desc: "Reach users by location and interest.",
-    bgColor: "bg-purple-50",
-    iconColor: "text-purple-600",
-  },
-  {
-    icon: <IoRocketOutline />,
-    title: "Quick Setup",
-    desc: "Get started in minutes, no hassle.",
-    bgColor: "bg-teal-50",
-    iconColor: "text-teal-600",
-  },
-];
+import { storeData } from "./StoreServiceConstant";
 
 const StoreSection = () => {
   return (
-    <section className="mb-32  relative" id="features">
+    <section className="mb-16 py-16 relative" id="forstores">
       <div className="absolute inset-0 bg-black"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -76,7 +26,10 @@ const StoreSection = () => {
           <div className="backdrop-blur-xl  bg-white/5 border border-white/20 rounded-3xl p-8 shadow-2xl ">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {storeData.map((store, index) => (
-                <div key={index} className="group relative overflow-hidden">
+                <div
+                  key={index}
+                  className="group relative overflow-hidden cursor-pointer"
+                >
                   <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl p-[1px]">
                     <div className="w-full h-full bg-gray-900 rounded-2xl"></div>
                   </div>

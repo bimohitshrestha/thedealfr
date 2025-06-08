@@ -1,8 +1,10 @@
 import React from "react";
-import { BsTwitterX } from "react-icons/bs";
-import { FaInstagram, FaLinkedin, FaPhone } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa6";
-import { MdOutlineMail } from "react-icons/md";
+import {
+  contactInfo,
+  quickLinks,
+  socialLinks,
+  supportLinks,
+} from "./FooterConstant";
 
 const Footer = () => {
   return (
@@ -11,9 +13,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 lg:gap-16">
           <div className="md:col-span-1">
             <div className="mb-6">
-              <h2 className="text-3xl font-bold text-white mb-2  ">
-                TheDealsFr
-              </h2>
+              <h2 className="text-3xl font-bold text-white mb-2">TheDealsFr</h2>
               <div className="w-12 h-1 bg-gradient-to-r from-level to-purple-500 rounded-full"></div>
             </div>
             <p className="text-gray-400 mb-8 text-sm leading-relaxed max-w-sm">
@@ -22,30 +22,15 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-4">
-              <a
-                href="#"
-                className="p-3 bg-gray-800 hover:bg-blue-500 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
-              >
-                <FaFacebook className="w-5 h-5 " />
-              </a>
-              <a
-                href="#"
-                className="p-3 bg-gray-800 hover:bg-gray-800 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
-              >
-                <BsTwitterX className="w-5 h-5 transition-colors" />
-              </a>
-              <a
-                href="#"
-                className="p-3 bg-gray-800 hover:bg-rose-500 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
-              >
-                <FaInstagram className="w-5 h-5  transition-colors" />
-              </a>
-              <a
-                href="#"
-                className="p-3 bg-gray-800 hover:bg-blue-800 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
-              >
-                <FaLinkedin className="w-5 h-5 transition-colors" />
-              </a>
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.link}
+                  className="p-3 bg-gray-800 hover:bg-blue-500 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -55,42 +40,17 @@ const Footer = () => {
               <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-transparent"></div>
             </h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#features"
-                  className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
-                >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#forstores"
-                  className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
-                >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
-                  For Stores
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#mobile-app"
-                  className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
-                >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
-                  Mobile App
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#pricing"
-                  className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
-                >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
-                  Pricing
-                </a>
-              </li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.link}
+                    className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
+                  >
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -100,42 +60,17 @@ const Footer = () => {
               <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-purple-500 to-transparent"></div>
             </h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
-                >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-purple-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
-                >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-purple-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
-                >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-purple-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
-                >
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-purple-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
-                  Cookie Policy
-                </a>
-              </li>
+              {supportLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.link}
+                    className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
+                  >
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-purple-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -145,39 +80,21 @@ const Footer = () => {
               <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-green-500 to-transparent"></div>
             </h3>
             <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-all duration-200 flex items-center gap-3 text-sm group p-2 -m-2 rounded-lg hover:bg-gray-800/30"
-                >
-                  <span className="p-2 bg-gray-800/50 rounded-lg group-hover:bg-green-600/20 transition-all duration-200">
-                    <MdOutlineMail className="w-4 h-4 group-hover:text-green-400" />
-                  </span>
-                  hello@thedealsfr.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-all duration-200 flex items-center gap-3 text-sm group p-2 -m-2 rounded-lg hover:bg-gray-800/30"
-                >
-                  <span className="p-2 bg-gray-800/50 rounded-lg group-hover:bg-blue-600/20 transition-all duration-200">
-                    <FaPhone className="w-4 h-4 group-hover:text-blue-400" />
-                  </span>
-                  +91 123 456 7890
-                </a>
-              </li>
-              <li>
-                {/* <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-all duration-200 flex items-center gap-3 text-sm group p-2 -m-2 rounded-lg hover:bg-gray-800/30"
-                >
-                  <span className="p-2 bg-gray-800/50 rounded-lg group-hover:bg-red-600/30 transition-all duration-200">
-                    <FaLocationDot className="w-4 h-4 group-hover:text-red-400" />
-                  </span>
-                  Mumbai, India
-                </a> */}
-              </li>
+              {contactInfo.map((contact, index) => (
+                <li key={index}>
+                  <a
+                    href={contact.link}
+                    className="text-gray-400 hover:text-white transition-all duration-200 flex items-center gap-3 text-sm group p-2 -m-2 rounded-lg hover:bg-gray-800/30"
+                  >
+                    <span
+                      className={`p-2 ${contact.bgColor} rounded-lg ${contact.hoverColor} transition-all duration-200`}
+                    >
+                      {contact.icon}
+                    </span>
+                    {contact.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

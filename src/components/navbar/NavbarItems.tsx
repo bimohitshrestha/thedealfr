@@ -1,16 +1,6 @@
-export const navItems = [
-  {
-    name: "Home",
-    href: "/",
-  },
-
-  {
-    name: "Services",
-    href: "/services",
-    subItems: null,
-  },
-  {
-    name: "About Us",
-    href: "/about-us",
-  },
+export const navigationItems = [
+  { href: "#features", label: "Features" },
+  { href: "#forstores", label: "For Stores" },
+  { href: "#mobile-app", label: "Mobile App" },
+  { href: "#pricing", label: "Pricing" },
 ];

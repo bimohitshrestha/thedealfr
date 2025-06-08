@@ -2,17 +2,11 @@
 import ButtonText from "@/components/button/ButtonText";
 import HeaderText from "@/components/text/HeaderText";
 import { FaApple, FaPlay } from "react-icons/fa";
-
-const data = [
-  { name: "Real-time deal alerts" },
-  { name: "Intuitive map view" },
-  { name: "Personalized recommendations" },
-  { name: "One-tap deal redemption" },
-];
+import { data } from "./DealsConstant";
 
 const Deals = () => {
   return (
-    <div className="mb-16 sm:mb-24 lg:mb-32 relative overflow-hidden">
+    <div className="mb-16  py-16 relative overflow-hidden" id="mobile-app">
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-transparent to-blue-900/20"></div>
 
       <div className="container mx-auto relative px-4 sm:px-6 lg:px-8">

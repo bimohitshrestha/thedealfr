@@ -10,29 +10,15 @@ import { LuStore } from "react-icons/lu";
 import HeroSection from "../herosection/HeroSection";
 import ButtonText from "../button/ButtonText";
 import ButtonWhiteText from "../button/ButtonWhiteText";
+import { navigationItems } from "./NavbarItems";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("/");
 
-  const navigationItems = [
-    { href: "#features", label: "Features" },
-    { href: "#forstores", label: "For Stores" },
-    { href: "#mobile-app", label: "Mobile App" },
-    { href: "#pricing", label: "Pricing" },
-  ];
-
-  // useEffect(() => {
-  //   if (isMenuOpen) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "";
-  //   }
-  // }, [isMenuOpen]);
-
   return (
     <>
-      <section className="relative w-full min-h-screen bg-black">
+      <section className="relative w-full min-h-screen mb-16 bg-black">
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white bg-black/80 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3">
@@ -70,11 +56,15 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center space-x-3">
               <ButtonWhiteText
                 name="Download App"
-                icon={<FaMobileAlt className="text-white w-4 h-4" />}
+                icon={<FaMobileAlt className=" w-4 h-4" />}
               />
+
               <ButtonText
                 name="Register Store"
-                icon={<LuStore className="text-white w-4 h-4" />}
+                href="/#become-partner"
+                icon={
+                  <LuStore className="text-white hover:text-black w-4 h-4" />
+                }
               />
             </div>
 
@@ -128,7 +118,7 @@ export default function Navbar() {
                     <ButtonWhiteText
                       name="Download App"
                       icon={
-                        <FaMobileAlt className="text-white w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        <FaMobileAlt className="text-green-500 w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       }
                     />
                   </div>

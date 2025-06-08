@@ -57,7 +57,7 @@ const HeroSection = () => {
           />
           <ButtonWhiteText
             name="List Your Store"
-            icon={<LuStore className="text-white w-4 h-4" />}
+            icon={<LuStore className=" w-4 h-4" />}
           />
         </div>
 
