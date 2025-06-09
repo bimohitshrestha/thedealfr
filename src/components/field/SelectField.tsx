@@ -26,12 +26,12 @@ const SelectField: React.FC<SelectFieldInterface> = ({
         name={name}
         value={value}
         onChange={onChange}
-        className="w-full p-4 rounded-xl bg-gray-800/50 border border-gray-600/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400/50 focus:border-green-400/50 transition-all duration-200"
+        className="w-full p-4 rounded-xl bg-gray-800/50 border border-gray-600/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400/50 focus:border-green-400/50 "
         required={required}
       >
         <option value="">Select {label}</option>
         {options.map((option, index) => (
-          <option key={index} value={option} className="text-black">
+          <option key={index} value={option} className="text-black   w-[50px]">
             {option}
           </option>
         ))}

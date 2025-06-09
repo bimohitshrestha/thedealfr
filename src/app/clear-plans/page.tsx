@@ -44,7 +44,7 @@ const ClearPlans = () => {
                   >
                     {plan.icon}
                   </div>
-                  <div>
+                  <div className="">
                     <h3 className="text-xl font-semibold text-white">
                       {plan.name}
                     </h3>
@@ -68,14 +68,14 @@ const ClearPlans = () => {
                 </div>
 
                 <ul className="space-y-4 mb-10 flex-grow">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3 group/item">
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3 ">
                       <div
                         className={`mt-1 p-1.5 rounded-full bg-gradient-to-r ${plan.gradientFrom} ${plan.gradientTo}`}
                       >
                         <FiCheck className="w-3.5 h-3.5 text-white" />
                       </div>
-                      <span className="text-gray-300 group-hover/item:text-white transition-colors duration-200 text-sm leading-relaxed">
+                      <span className="text-gray-300 text-sm leading-relaxed">
                         {feature}
                       </span>
                     </li>

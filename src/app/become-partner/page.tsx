@@ -12,7 +12,7 @@ const BecomePartner = () => {
     email: "",
     phone: "",
     category: "",
-    message: "",
+
     website: "",
     description: "",
     address: "",

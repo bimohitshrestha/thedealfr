@@ -11,6 +11,7 @@ import HeroSection from "../herosection/HeroSection";
 import ButtonText from "../button/ButtonText";
 import ButtonWhiteText from "../button/ButtonWhiteText";
 import { navigationItems } from "./NavbarItems";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,13 +22,21 @@ export default function Navbar() {
       <section className="relative w-full min-h-screen mb-16 bg-black">
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white bg-black/80 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="text-white font-bold text-lg sm:text-xl leading-tight">
+            <a
+              href="#"
+              className="flex flex-col items-center space-y-1 cursor-pointer"
+            >
+              {/* <div className="text-white font-bold text-lg sm:text-xl leading-tight">
                 <p>The</p>
                 <p>DealsFr.</p>
                 <p className="text-xs sm:text-sm font-normal">Deals For Real</p>
-              </div>
-            </Link>
+              </div> */}
+
+              <Image src="/logo.png" alt="logo" width={200} height={100} />
+              <p className="text-2xl font-semibold text-gradient">
+                Deals For Real
+              </p>
+            </a>
 
             <div className="hidden lg:flex space-x-6 items-center">
               {navigationItems.map(({ href, label }) => {
@@ -56,15 +65,12 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center space-x-3">
               <ButtonWhiteText
                 name="Download App"
-                icon={<FaMobileAlt className=" w-4 h-4" />}
+                icon={<FaMobileAlt className="w-4 h-4" />}
               />
-
               <ButtonText
                 name="Register Store"
                 href="/#become-partner"
-                icon={
-                  <LuStore className="text-white hover:text-black w-4 h-4" />
-                }
+                icon={<LuStore className="text-white  w-4 h-4" />}
               />
             </div>
 
@@ -73,7 +79,7 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Toggle menu"
                 aria-expanded={isMenuOpen}
-                className="text-white p-1.5 sm:p-2 rounded-md focus:outline-none focus:ring-2 touch-manipulation"
+                className="text-white p-1.5 sm:p-2 rounded-md focus:outline-none focus:ring-2 "
               >
                 {isMenuOpen ? (
                   <FiX size={20} className="sm:w-6 sm:h-6" />

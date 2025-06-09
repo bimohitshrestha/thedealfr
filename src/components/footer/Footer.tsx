@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="mb-6">
               <h2 className="text-3xl font-bold text-white mb-2">TheDealsFr</h2>
-              <div className="w-12 h-1 bg-gradient-to-r from-level to-purple-500 rounded-full"></div>
+              <div className="w-12 h-1 bg-gradient rounded-full"></div>
             </div>
             <p className="text-gray-400 mb-8 text-sm leading-relaxed max-w-sm">
               Discover local deals and help businesses thrive. We bridge
@@ -37,7 +37,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-6 relative">
               Quick Links
-              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-transparent"></div>
+              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-amber-700 to-transparent"></div>
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
@@ -46,7 +46,7 @@ const Footer = () => {
                     href={link.link}
                     className="text-gray-400 hover:text-white transition-all duration-200 text-sm flex items-center group"
                   >
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-blue-500 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
+                    <span className="w-0 group-hover:w-2 h-0.5 bg-amber-700 transition-all duration-200 mr-0 group-hover:mr-3 rounded-full"></span>
                     {link.label}
                   </a>
                 </li>
@@ -57,7 +57,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-6 relative">
               Support
-              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-purple-500 to-transparent"></div>
+              <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-purple-600 to-transparent"></div>
             </h3>
             <ul className="space-y-3">
               {supportLinks.map((link, index) => (

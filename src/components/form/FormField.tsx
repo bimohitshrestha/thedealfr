@@ -9,7 +9,7 @@ interface FormFieldProps {
     email: string;
     phone: string;
     category: string;
-    message: string;
+    // message: string;
     website: string;
     description: string;
     address: string;

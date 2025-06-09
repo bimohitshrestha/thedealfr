@@ -3,6 +3,7 @@ import ButtonText from "@/components/button/ButtonText";
 import HeaderText from "@/components/text/HeaderText";
 import { FaApple, FaPlay } from "react-icons/fa";
 import { data } from "./DealsConstant";
+import ButtonWhiteText from "@/components/button/ButtonWhiteText";
 
 const Deals = () => {
   return (
@@ -60,7 +61,7 @@ const Deals = () => {
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
                 <ButtonText name="App Store" icon={<FaApple />} />
-                <ButtonText name="Google Play" icon={<FaPlay />} />
+                <ButtonWhiteText name="Google Play" icon={<FaPlay />} />
               </div>
             </div>
           </div>

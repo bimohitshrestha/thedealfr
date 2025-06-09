@@ -17,7 +17,7 @@ const ButtonWhiteText: React.FC<ButtonInterface> = ({
 }) => {
   return (
     <button
-      className={`flex items-center gap-3 px-4 py-2 cursor-pointer text-center rounded-xl border-1 text-primary   hover:text-green-500 mt-5 lg:mt-0 ${className}`}
+      className={`flex items-center gap-3 px-4 py-2 cursor-pointer text-center rounded-xl border-1 text-primary   hover:text-[#00c851] mt-5 lg:mt-0 ${className}`}
       onClick={onClick}
       type={type}
     >

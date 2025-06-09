@@ -1,9 +1,8 @@
 "use client";
 import { useState } from "react";
 import InputField from "@/components/field/InputField";
-import { GiSparkles } from "react-icons/gi";
+
 import { IoMdMail } from "react-icons/io";
-import { IoSparklesSharp } from "react-icons/io5";
 
 import ButtonText from "@/components/button/ButtonText";
 
@@ -34,19 +33,6 @@ const SubscribeSection = () => {
     <div className="text-center mb-16  py-12 sm:py-16 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/20 via-blue-900/20 to-cyan-900/20"></div>
 
-      <div className="absolute top-8 left-8 text-purple-400/30 hidden xs:block">
-        <GiSparkles size={50} />
-      </div>
-      <div className="absolute bottom-8 left-8 text-rose-400/30 hidden xs:block">
-        <IoSparklesSharp size={50} />
-      </div>
-      <div className="absolute bottom-8 right-8 text-blue-400/30 hidden xs:block">
-        <GiSparkles size={50} />
-      </div>
-      <div className="absolute top-16 right-16 text-purple-300/20 hidden xs:block">
-        <IoSparklesSharp size={50} />
-      </div>
-
       <div className="relative z-10 max-w-2xl mx-auto px-4">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-6 mx-auto">
           <IoMdMail className="text-black w-8 h-8" />
@@ -70,16 +56,24 @@ const SubscribeSection = () => {
             className="flex flex-col sm:flex-row justify-center gap-4 max-w-lg mx-auto w-full"
             onSubmit={handleSubmit}
           >
-            <div className="flex-1 w-full">
-              <InputField
-                name="email"
-                placeholder="your@email.com"
-                value={email}
-                onChange={handleChange}
-              />
+            <div className="flex-1 w-full relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-green-500/50 to-blue-500/50 rounded-lg blur-xl opacity-0 group-hover:opacity-80 transition duration-300"></div>
+              <div className="relative">
+                <InputField
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  value={email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:border-blue-400/50 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                  required
+                />
+              </div>
             </div>
 
-            <ButtonText name="Subscribe" type="submit" />
+            <div className="flex items-center justify-center">
+              <ButtonText name="Subscribe" type="submit" />
+            </div>
           </form>
         )}
 
