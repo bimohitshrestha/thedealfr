@@ -1,6 +1,12 @@
 import { ReactElement } from "react";
 import { BsTwitterX } from "react-icons/bs";
-import { FaInstagram, FaLinkedin, FaPhone, FaFacebook } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaPhone,
+  FaFacebook,
+  FaLocationArrow,
+} from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 
 export interface LinkItem {
@@ -52,7 +58,14 @@ export const contactInfo: ContactItem[] = [
   },
   {
     icon: <FaPhone className="w-4 h-4 group-hover:text-blue-400" />,
-    label: "+91 123 456 7890",
+    label: "+977-9851129971",
+    link: "#",
+    bgColor: "bg-gray-800/50",
+    hoverColor: "group-hover:bg-blue-600/20",
+  },
+  {
+    icon: <FaLocationArrow className="w-4 h-4 grooup-hover:text-rose-600s" />,
+    label: "Sanepa-2 , Lalitpur , Nepal",
     link: "#",
     bgColor: "bg-gray-800/50",
     hoverColor: "group-hover:bg-blue-600/20",
