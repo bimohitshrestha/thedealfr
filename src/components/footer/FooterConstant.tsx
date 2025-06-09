@@ -64,7 +64,7 @@ export const contactInfo: ContactItem[] = [
     hoverColor: "group-hover:bg-blue-600/20",
   },
   {
-    icon: <FaLocationArrow className="w-4 h-4 grooup-hover:text-rose-600s" />,
+    icon: <FaLocationArrow className="w-4 h-4 group-hover:text-rose-600" />,
     label: "Sanepa-2 , Lalitpur , Nepal",
     link: "#",
     bgColor: "bg-gray-800/50",
