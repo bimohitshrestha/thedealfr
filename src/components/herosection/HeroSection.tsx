@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="py-16 bg-black text-white" id="/">
       <div className="max-w-7xl mx-auto text-center px-4 sm:px-6">
-        <h1 className="text-5xl sm:text-7xl font-[1000] leading-tight mb-2">
+        <h1 className="text-5xl sm:text-7xl mt-20 lg:mt-0 font-[1000] leading-tight mb-2">
           Discover <span className="text-gradient">Local Deals</span>,
           Effortlessly.
         </h1>

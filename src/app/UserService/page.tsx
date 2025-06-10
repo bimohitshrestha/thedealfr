@@ -6,7 +6,7 @@ import { serviceData } from "./ServiceDataConstant";
 const ServicesSection = () => {
   return (
     <section
-      className="mb-16 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16 bg-shape border-y-2 border-[#353735] relative group"
+      className="mb-16 py-6  bg-shape border-y-2 border-[#353735] relative group"
       id="features"
     >
       <div className="absolute inset-0 bg-blue-800/20 rounded-3xl blur-2xl transition-colors duration-300" />

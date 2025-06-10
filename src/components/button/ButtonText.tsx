@@ -16,7 +16,7 @@ const ButtonText: React.FC<ButtonTextInterface> = ({
   href,
 }) => {
   const classes =
-    "btn-gradient text-white px-4 py-2 md:px-4 md:py-2 overflow-hidden lg:px-6 lg:py-3 rounded-xl transition duration-300 cursor-pointer mt-4 sm:mt-0 sm:ml-6 flex items-center gap-2";
+    "btn-gradient flex items-center gap-3 px-4 py-2 cursor-pointer text-center rounded-xl text-primary   hover:text-[#00c851] mt-5 lg:mt-0 ";
 
   if (href) {
     return (

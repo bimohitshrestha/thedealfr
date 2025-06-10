@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <>
-      <section className="relative w-full min-h-screen mb-16 bg-black">
+      <section className="relative w-full min-h-screen md:flex md:flex-col md:items-center md:justify-center mb-16 bg-black">
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white bg-black/80 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
             <a
@@ -98,7 +98,7 @@ export default function Navbar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden fixed top-[65px] sm:top-[73px] left-0 right-0 z-40 bg-black/95 backdrop-blur-md border-b border-white/10 px-3 sm:px-4 pt-3 sm:pt-4 pb-4 sm:pb-6"
+              className="lg:hidden fixed top-[130px] sm:top-[130px] left-0 right-0 z-40 bg-black/95 backdrop-blur-md border-b border-white/10 px-3 sm:px-4 pt-3 sm:pt-4 pb-4 sm:pb-6"
             >
               <div className="flex flex-col space-y-2 sm:space-y-3">
                 {navigationItems.map(({ href, label }) => (
@@ -142,7 +142,7 @@ export default function Navbar() {
           )}
         </AnimatePresence>
 
-        <div className="pt-[65px] sm:pt-[73px] lg:pt-28">
+        <div className="lg:pt-28 ">
           <HeroSection />
         </div>
       </section>

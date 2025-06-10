@@ -12,7 +12,6 @@ const BecomePartner = () => {
     email: "",
     phone: "",
     category: "",
-
     website: "",
     description: "",
     address: "",
@@ -36,9 +35,23 @@ const BecomePartner = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    console.log("Form submitted:", formData);
+    try {
+      console.log("Form submitted:", formData);
 
-    setIsSubmitting(false);
+      setFormData({
+        storeName: "",
+        email: "",
+        phone: "",
+        category: "",
+        website: "",
+        description: "",
+        address: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
